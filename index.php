@@ -31,6 +31,11 @@ if($action=="add"){
   $id=$_GET['id'];
   $article=article_delete($link,$id);
   header("Location:welcome.php");
+}else if($action=="addstream"){
+  if(!empty($_POST)){
+  stream_new($link,$_POST['message']);
+}
+  include("views/stream_add.php");
 }else{
 $articles=articles_all();
 include("views/articlesview.php");

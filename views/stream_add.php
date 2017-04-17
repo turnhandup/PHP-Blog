@@ -30,18 +30,12 @@
 </head>
 <body  style="background:url(https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg); background-size:100%;">
 
-  <div style="background:rgba(212, 214, 219,0.7);text-align:center; margin-left:25%;padding:50px;margin-top:50px; width:50%">
-    <h1> ADDING NEW POST </h1>
-    <form enctype="multipart/form-data" method="post" action="index.php?action=add">
-      <label> Header</label><input type="text" name="header" value="" required class="form-control">
-      <label> Date</label><input class="form-control" type="date" name="date" value="" required>
+  <div style="background:rgba(212, 214, 219,0.7);text-align:center; margin-left:25%;padding:100px;margin-top:50px; width:50%">
+    <h1> STREAM MESSAGE HERE </h1>
+    <form method="post" action="index.php?action=addstream">
      <label> Text</label><br>
-      <textarea rows="10" class="form-control" name="content" required></textarea>
-
-    <label> Image
-      <input  type="file" name="img">
-    </label><br>
-    <input type="submit" class="col-sm-offset-2 col-sm-8 btn btn-default">
+      <textarea class="form-control" name="message" required></textarea>
+    <input type="submit" style="margin-bottom:30px;margin-top:30px" class="col-sm-offset-2 col-sm-8 btn btn-default">
   </div>
 </body>
 <html>

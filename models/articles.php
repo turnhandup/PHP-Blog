@@ -40,10 +40,15 @@ function articles_new($link, $header, $date, $content, $img){
 
     return true;
 }
+function stream_new($link, $message){
+  $t="INSERT INTO stream (message) VALUES('%s')";
+  $query=sprintf($t,mysqli_real_escape_string($link,$message));
+  $result=mysqli_query($link,$query);
 
+  return true;
+}
 function article_edit($link, $id, $header, $date, $content,$img){
-  if($header='')
-    return false;
+
   $image=file_get_contents($img);
   $sql="UPDATE post SET header='%s', date='%s', text='%s', img='%s' WHERE id='%d'";
   $query =sprintf($sql, mysqli_real_escape_string($link,$header),mysqli_real_escape_string($link,$date), mysqli_real_escape_string($link,$content),mysqli_real_escape_string($link,$image), $id);
